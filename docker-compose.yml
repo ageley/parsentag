@@ -1,0 +1,27 @@
+services:
+  parsentag:
+    build: .
+    image: parsentag:1.0
+    container_name: parsentag
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_REGION: ${AWS_REGION}
+      AWS_S3_IMAGE_BUCKET_NAME: ${AWS_S3_IMAGE_BUCKET_NAME}
+      AWS_S3_TEXT_BUCKET_NAME: ${AWS_S3_TEXT_BUCKET_NAME}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/parsentag
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+
+  postgres:
+    image: postgres:17.5-alpine3.22
+    container_name: postgres
+    ports:
+      - "5430:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: parsentag
+
+
