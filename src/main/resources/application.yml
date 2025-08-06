@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: parsentag
+  datasource:
+    driverClassName: org.postgresql.Driver
+logging:
+  level:
+    com:
+      parsentag: INFO
+image:
+  max:
+    size-mb: 5
+    sizes-count: 4
