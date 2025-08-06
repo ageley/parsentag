@@ -160,6 +160,8 @@ docker pull 007123456789.dkr.ecr.us-east-1.amazonaws.com/parsentag:1.0
 
 Run an app in Docker:
 
+//todo: Протестировать подключение к Postgres в облаке, может потребоваться дополнительная политика
+
 ```shell
 docker run --rm --env-file .env --name parsentag 007123456789.dkr.ecr.us-east-1.amazonaws.com/parsentag:1.0
 ```

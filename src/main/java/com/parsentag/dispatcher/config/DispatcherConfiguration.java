@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @RequiredArgsConstructor
 @Configuration
 public class DispatcherConfiguration {
+    //todo: Создавать бины *PropertyProvider с минимально необходимым набором свойств и инжектить их
     @Value("${telegram.bot.token}")
     private final String token;
 

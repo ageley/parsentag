@@ -41,6 +41,7 @@ public class MessageDispatcher {
     private final ImageProcessingService imageProcessingService;
     private final TaggingService taggingService;
 
+    //todo: Применить паттерн стратегия
     public void dispatch(Update update) {
         if (update.hasCallbackQuery()) {
             CallbackQuery callback = update.getCallbackQuery();

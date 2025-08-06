@@ -9,6 +9,7 @@ import software.amazon.awssdk.services.textract.model.DetectDocumentTextRequest;
 
 import java.util.stream.Collectors;
 
+//todo: Переименовать: убрать Impl, перенести специфику в начало, т.е. TextractCharacterRecognitionService
 @Slf4j
 @RequiredArgsConstructor
 public class CharacterRecognitionRepositoryTextractImpl implements CharacterRecognitionRepository {

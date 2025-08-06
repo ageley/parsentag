@@ -9,6 +9,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Repository
 public class TagRepositoryPostgresImpl implements TagRepository {
+    //todo: Переместить SQL-запросы ближе к методам, где они используются
     //language=SQL
     private static final String SELECT_SQL = "SELECT tag FROM tags WHERE chat_id = ? ORDER BY tag";
     //language=SQL
@@ -16,6 +17,8 @@ public class TagRepositoryPostgresImpl implements TagRepository {
     //language=SQL
     private static final String DELETE_SQL = "DELETE FROM tags WHERE chat_id = ?";
 
+    //todo: При объявлении переменной указывать интерфейс, а не реализацию
+    //todo: Перейти на NamedParameterJdbcOperations
     private final JdbcTemplate jdbcTemplate;
 
     @Override
